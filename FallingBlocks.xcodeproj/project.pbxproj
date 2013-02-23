@@ -7,6 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0666C93A16D88EAE000B3EF7 /* MainScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E8C74A16D8875000997A94 /* MainScreenViewController.m */; };
+		0666C93C16D88EF7000B3EF7 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0666C93B16D88EF7000B3EF7 /* Storyboard.storyboard */; };
+		0666C93D16D88F1A000B3EF7 /* ScoreTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E8C75616D8878100997A94 /* ScoreTracker.m */; };
+		0666C93E16D88F25000B3EF7 /* FallingBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E8C72316D884DE00997A94 /* FallingBlocks.m */; };
+		0666C93F16D88F54000B3EF7 /* BlueBlock.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E8C72B16D8859D00997A94 /* BlueBlock.png */; };
+		0666C94016D88F54000B3EF7 /* MainMenuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E8C73316D8860100997A94 /* MainMenuButton.png */; };
+		0666C94116D88F54000B3EF7 /* OrangeBlock.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E8C73416D8860100997A94 /* OrangeBlock.png */; };
+		0666C94216D88F54000B3EF7 /* PinkBlock.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E8C73716D8860100997A94 /* PinkBlock.png */; };
+		0666C94316D88F54000B3EF7 /* RedBlock.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E8C73816D8860100997A94 /* RedBlock.png */; };
+		0666C94416D88F5E000B3EF7 /* PauseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E8C74E16D8876900997A94 /* PauseView.m */; };
+		0666C94516D88F61000B3EF7 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E8C71C16D8844C00997A94 /* GameViewController.m */; };
+		0666C94616D88F66000B3EF7 /* RenderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E8C75416D8878100997A94 /* RenderView.m */; };
+		0666C94716D88FA3000B3EF7 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E8C72616D8859D00997A94 /* Block.m */; };
+		0666C94816D88FA3000B3EF7 /* BlockFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E8C72816D8859D00997A94 /* BlockFactory.m */; };
+		0666C94916D88FA3000B3EF7 /* BlueBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E8C72A16D8859D00997A94 /* BlueBlock.m */; };
+		0666C94A16D88FA3000B3EF7 /* GreenBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E8C73E16D886F200997A94 /* GreenBlock.m */; };
+		0666C94B16D88FA3000B3EF7 /* OrangeBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E8C74C16D8875E00997A94 /* OrangeBlock.m */; };
+		0666C94C16D88FA3000B3EF7 /* PinkBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E8C75016D8877300997A94 /* PinkBlock.m */; };
+		0666C94D16D88FA3000B3EF7 /* RedBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E8C75216D8877300997A94 /* RedBlock.m */; };
+		0666C94E16D88FA3000B3EF7 /* TealBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E8C75A16D8879200997A94 /* TealBlock.m */; };
+		0666C94F16D88FA3000B3EF7 /* YellowBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E8C75C16D8879200997A94 /* YellowBlock.m */; };
+		0666C95016D88FBE000B3EF7 /* Piece.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E8C71E16D8844C00997A94 /* Piece.m */; };
+		0666C95116D88FBE000B3EF7 /* Cross.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E8C72D16D8859D00997A94 /* Cross.m */; };
+		0666C95216D88FBE000B3EF7 /* Jagged.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E8C74016D8870500997A94 /* Jagged.m */; };
+		0666C95316D88FBE000B3EF7 /* JaggedBackwards.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E8C74216D8870500997A94 /* JaggedBackwards.m */; };
+		0666C95416D88FBE000B3EF7 /* L.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E8C74416D8871200997A94 /* L.m */; };
+		0666C95516D88FBE000B3EF7 /* LBackwards.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E8C74616D8871200997A94 /* LBackwards.m */; };
+		0666C95616D88FBE000B3EF7 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E8C74816D8871200997A94 /* Line.m */; };
+		0666C95716D88FBE000B3EF7 /* Square.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E8C75816D8879200997A94 /* Square.m */; };
+		0666C95916D89002000B3EF7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0666C95816D89002000B3EF7 /* QuartzCore.framework */; };
 		06E8C6FA16D883FB00997A94 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E8C6F916D883FB00997A94 /* UIKit.framework */; };
 		06E8C6FC16D883FB00997A94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E8C6FB16D883FB00997A94 /* Foundation.framework */; };
 		06E8C6FE16D883FB00997A94 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E8C6FD16D883FB00997A94 /* CoreGraphics.framework */; };
@@ -18,9 +48,14 @@
 		06E8C71016D883FB00997A94 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E8C70F16D883FB00997A94 /* Default@2x.png */; };
 		06E8C71216D883FB00997A94 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E8C71116D883FB00997A94 /* Default-568h@2x.png */; };
 		06E8C71516D883FB00997A94 /* FallingBlocks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 06E8C71316D883FB00997A94 /* FallingBlocks.xcdatamodeld */; };
+		06E8C73216D885E900997A94 /* GreenBlock.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E8C73116D885E900997A94 /* GreenBlock.png */; };
+		06E8C73B16D8864000997A94 /* TealBlock.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E8C73916D8864000997A94 /* TealBlock.png */; };
+		06E8C73C16D8864000997A94 /* YellowBlock.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E8C73A16D8864000997A94 /* YellowBlock.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0666C93B16D88EF7000B3EF7 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		0666C95816D89002000B3EF7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		06E8C6F616D883FB00997A94 /* FallingBlocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FallingBlocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06E8C6F916D883FB00997A94 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		06E8C6FB16D883FB00997A94 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -36,6 +71,60 @@
 		06E8C70F16D883FB00997A94 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		06E8C71116D883FB00997A94 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		06E8C71416D883FB00997A94 /* FallingBlocks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FallingBlocks.xcdatamodel; sourceTree = "<group>"; };
+		06E8C71B16D8844C00997A94 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		06E8C71C16D8844C00997A94 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		06E8C71D16D8844C00997A94 /* Piece.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Piece.h; sourceTree = "<group>"; };
+		06E8C71E16D8844C00997A94 /* Piece.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Piece.m; sourceTree = "<group>"; };
+		06E8C72216D884DE00997A94 /* FallingBlocks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FallingBlocks.h; sourceTree = "<group>"; };
+		06E8C72316D884DE00997A94 /* FallingBlocks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FallingBlocks.m; sourceTree = "<group>"; };
+		06E8C72516D8859D00997A94 /* Block.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
+		06E8C72616D8859D00997A94 /* Block.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Block.m; sourceTree = "<group>"; };
+		06E8C72716D8859D00997A94 /* BlockFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockFactory.h; sourceTree = "<group>"; };
+		06E8C72816D8859D00997A94 /* BlockFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockFactory.m; sourceTree = "<group>"; };
+		06E8C72916D8859D00997A94 /* BlueBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlueBlock.h; sourceTree = "<group>"; };
+		06E8C72A16D8859D00997A94 /* BlueBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlueBlock.m; sourceTree = "<group>"; };
+		06E8C72B16D8859D00997A94 /* BlueBlock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueBlock.png; sourceTree = "<group>"; };
+		06E8C72C16D8859D00997A94 /* Cross.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cross.h; sourceTree = "<group>"; };
+		06E8C72D16D8859D00997A94 /* Cross.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cross.m; sourceTree = "<group>"; };
+		06E8C73116D885E900997A94 /* GreenBlock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenBlock.png; sourceTree = "<group>"; };
+		06E8C73316D8860100997A94 /* MainMenuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainMenuButton.png; sourceTree = "<group>"; };
+		06E8C73416D8860100997A94 /* OrangeBlock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OrangeBlock.png; sourceTree = "<group>"; };
+		06E8C73716D8860100997A94 /* PinkBlock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PinkBlock.png; sourceTree = "<group>"; };
+		06E8C73816D8860100997A94 /* RedBlock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedBlock.png; sourceTree = "<group>"; };
+		06E8C73916D8864000997A94 /* TealBlock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TealBlock.png; sourceTree = "<group>"; };
+		06E8C73A16D8864000997A94 /* YellowBlock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YellowBlock.png; sourceTree = "<group>"; };
+		06E8C73D16D886F200997A94 /* GreenBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GreenBlock.h; sourceTree = "<group>"; };
+		06E8C73E16D886F200997A94 /* GreenBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GreenBlock.m; sourceTree = "<group>"; };
+		06E8C73F16D8870500997A94 /* Jagged.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Jagged.h; sourceTree = "<group>"; };
+		06E8C74016D8870500997A94 /* Jagged.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Jagged.m; sourceTree = "<group>"; };
+		06E8C74116D8870500997A94 /* JaggedBackwards.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JaggedBackwards.h; sourceTree = "<group>"; };
+		06E8C74216D8870500997A94 /* JaggedBackwards.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JaggedBackwards.m; sourceTree = "<group>"; };
+		06E8C74316D8871200997A94 /* L.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = L.h; sourceTree = "<group>"; };
+		06E8C74416D8871200997A94 /* L.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = L.m; sourceTree = "<group>"; };
+		06E8C74516D8871200997A94 /* LBackwards.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBackwards.h; sourceTree = "<group>"; };
+		06E8C74616D8871200997A94 /* LBackwards.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBackwards.m; sourceTree = "<group>"; };
+		06E8C74716D8871200997A94 /* Line.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
+		06E8C74816D8871200997A94 /* Line.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Line.m; sourceTree = "<group>"; };
+		06E8C74916D8875000997A94 /* MainScreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScreenViewController.h; sourceTree = "<group>"; };
+		06E8C74A16D8875000997A94 /* MainScreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainScreenViewController.m; sourceTree = "<group>"; };
+		06E8C74B16D8875E00997A94 /* OrangeBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrangeBlock.h; sourceTree = "<group>"; };
+		06E8C74C16D8875E00997A94 /* OrangeBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrangeBlock.m; sourceTree = "<group>"; };
+		06E8C74D16D8876900997A94 /* PauseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PauseView.h; sourceTree = "<group>"; };
+		06E8C74E16D8876900997A94 /* PauseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PauseView.m; sourceTree = "<group>"; };
+		06E8C74F16D8877300997A94 /* PinkBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PinkBlock.h; sourceTree = "<group>"; };
+		06E8C75016D8877300997A94 /* PinkBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PinkBlock.m; sourceTree = "<group>"; };
+		06E8C75116D8877300997A94 /* RedBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedBlock.h; sourceTree = "<group>"; };
+		06E8C75216D8877300997A94 /* RedBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RedBlock.m; sourceTree = "<group>"; };
+		06E8C75316D8878100997A94 /* RenderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenderView.h; sourceTree = "<group>"; };
+		06E8C75416D8878100997A94 /* RenderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RenderView.m; sourceTree = "<group>"; };
+		06E8C75516D8878100997A94 /* ScoreTracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScoreTracker.h; sourceTree = "<group>"; };
+		06E8C75616D8878100997A94 /* ScoreTracker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScoreTracker.m; sourceTree = "<group>"; };
+		06E8C75716D8879200997A94 /* Square.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Square.h; sourceTree = "<group>"; };
+		06E8C75816D8879200997A94 /* Square.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Square.m; sourceTree = "<group>"; };
+		06E8C75916D8879200997A94 /* TealBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TealBlock.h; sourceTree = "<group>"; };
+		06E8C75A16D8879200997A94 /* TealBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TealBlock.m; sourceTree = "<group>"; };
+		06E8C75B16D8879200997A94 /* YellowBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YellowBlock.h; sourceTree = "<group>"; };
+		06E8C75C16D8879200997A94 /* YellowBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YellowBlock.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0666C95916D89002000B3EF7 /* QuartzCore.framework in Frameworks */,
 				06E8C6FA16D883FB00997A94 /* UIKit.framework in Frameworks */,
 				06E8C6FC16D883FB00997A94 /* Foundation.framework in Frameworks */,
 				06E8C6FE16D883FB00997A94 /* CoreGraphics.framework in Frameworks */,
@@ -73,10 +163,11 @@
 		06E8C6F816D883FB00997A94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				06E8C6F916D883FB00997A94 /* UIKit.framework */,
-				06E8C6FB16D883FB00997A94 /* Foundation.framework */,
-				06E8C6FD16D883FB00997A94 /* CoreGraphics.framework */,
 				06E8C6FF16D883FB00997A94 /* CoreData.framework */,
+				06E8C6FD16D883FB00997A94 /* CoreGraphics.framework */,
+				06E8C6FB16D883FB00997A94 /* Foundation.framework */,
+				0666C95816D89002000B3EF7 /* QuartzCore.framework */,
+				06E8C6F916D883FB00997A94 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -84,8 +175,17 @@
 		06E8C70116D883FB00997A94 /* FallingBlocks */ = {
 			isa = PBXGroup;
 			children = (
+				0666C93B16D88EF7000B3EF7 /* Storyboard.storyboard */,
 				06E8C70A16D883FB00997A94 /* AppDelegate.h */,
 				06E8C70B16D883FB00997A94 /* AppDelegate.m */,
+				06E8C72E16D885A600997A94 /* Blocks */,
+				06E8C72116D884B900997A94 /* GUI */,
+				06E8C72F16D885B200997A94 /* Images */,
+				06E8C73016D885C300997A94 /* Pieces */,
+				06E8C72216D884DE00997A94 /* FallingBlocks.h */,
+				06E8C72316D884DE00997A94 /* FallingBlocks.m */,
+				06E8C75516D8878100997A94 /* ScoreTracker.h */,
+				06E8C75616D8878100997A94 /* ScoreTracker.m */,
 				06E8C71316D883FB00997A94 /* FallingBlocks.xcdatamodeld */,
 				06E8C70216D883FB00997A94 /* Supporting Files */,
 			);
@@ -104,6 +204,84 @@
 				06E8C71116D883FB00997A94 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		06E8C72116D884B900997A94 /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				06E8C74D16D8876900997A94 /* PauseView.h */,
+				06E8C74E16D8876900997A94 /* PauseView.m */,
+				06E8C71B16D8844C00997A94 /* GameViewController.h */,
+				06E8C71C16D8844C00997A94 /* GameViewController.m */,
+				06E8C74916D8875000997A94 /* MainScreenViewController.h */,
+				06E8C74A16D8875000997A94 /* MainScreenViewController.m */,
+				06E8C75316D8878100997A94 /* RenderView.h */,
+				06E8C75416D8878100997A94 /* RenderView.m */,
+			);
+			name = GUI;
+			sourceTree = "<group>";
+		};
+		06E8C72E16D885A600997A94 /* Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				06E8C72516D8859D00997A94 /* Block.h */,
+				06E8C72616D8859D00997A94 /* Block.m */,
+				06E8C72716D8859D00997A94 /* BlockFactory.h */,
+				06E8C72816D8859D00997A94 /* BlockFactory.m */,
+				06E8C72916D8859D00997A94 /* BlueBlock.h */,
+				06E8C72A16D8859D00997A94 /* BlueBlock.m */,
+				06E8C73D16D886F200997A94 /* GreenBlock.h */,
+				06E8C73E16D886F200997A94 /* GreenBlock.m */,
+				06E8C74B16D8875E00997A94 /* OrangeBlock.h */,
+				06E8C74C16D8875E00997A94 /* OrangeBlock.m */,
+				06E8C74F16D8877300997A94 /* PinkBlock.h */,
+				06E8C75016D8877300997A94 /* PinkBlock.m */,
+				06E8C75116D8877300997A94 /* RedBlock.h */,
+				06E8C75216D8877300997A94 /* RedBlock.m */,
+				06E8C75916D8879200997A94 /* TealBlock.h */,
+				06E8C75A16D8879200997A94 /* TealBlock.m */,
+				06E8C75B16D8879200997A94 /* YellowBlock.h */,
+				06E8C75C16D8879200997A94 /* YellowBlock.m */,
+			);
+			name = Blocks;
+			sourceTree = "<group>";
+		};
+		06E8C72F16D885B200997A94 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				06E8C72B16D8859D00997A94 /* BlueBlock.png */,
+				06E8C73116D885E900997A94 /* GreenBlock.png */,
+				06E8C73316D8860100997A94 /* MainMenuButton.png */,
+				06E8C73416D8860100997A94 /* OrangeBlock.png */,
+				06E8C73716D8860100997A94 /* PinkBlock.png */,
+				06E8C73816D8860100997A94 /* RedBlock.png */,
+				06E8C73916D8864000997A94 /* TealBlock.png */,
+				06E8C73A16D8864000997A94 /* YellowBlock.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		06E8C73016D885C300997A94 /* Pieces */ = {
+			isa = PBXGroup;
+			children = (
+				06E8C71D16D8844C00997A94 /* Piece.h */,
+				06E8C71E16D8844C00997A94 /* Piece.m */,
+				06E8C72C16D8859D00997A94 /* Cross.h */,
+				06E8C72D16D8859D00997A94 /* Cross.m */,
+				06E8C73F16D8870500997A94 /* Jagged.h */,
+				06E8C74016D8870500997A94 /* Jagged.m */,
+				06E8C74116D8870500997A94 /* JaggedBackwards.h */,
+				06E8C74216D8870500997A94 /* JaggedBackwards.m */,
+				06E8C74316D8871200997A94 /* L.h */,
+				06E8C74416D8871200997A94 /* L.m */,
+				06E8C74516D8871200997A94 /* LBackwards.h */,
+				06E8C74616D8871200997A94 /* LBackwards.m */,
+				06E8C74716D8871200997A94 /* Line.h */,
+				06E8C74816D8871200997A94 /* Line.m */,
+				06E8C75716D8879200997A94 /* Square.h */,
+				06E8C75816D8879200997A94 /* Square.m */,
+			);
+			name = Pieces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +339,15 @@
 				06E8C70E16D883FB00997A94 /* Default.png in Resources */,
 				06E8C71016D883FB00997A94 /* Default@2x.png in Resources */,
 				06E8C71216D883FB00997A94 /* Default-568h@2x.png in Resources */,
+				06E8C73216D885E900997A94 /* GreenBlock.png in Resources */,
+				06E8C73B16D8864000997A94 /* TealBlock.png in Resources */,
+				06E8C73C16D8864000997A94 /* YellowBlock.png in Resources */,
+				0666C93C16D88EF7000B3EF7 /* Storyboard.storyboard in Resources */,
+				0666C93F16D88F54000B3EF7 /* BlueBlock.png in Resources */,
+				0666C94016D88F54000B3EF7 /* MainMenuButton.png in Resources */,
+				0666C94116D88F54000B3EF7 /* OrangeBlock.png in Resources */,
+				0666C94216D88F54000B3EF7 /* PinkBlock.png in Resources */,
+				0666C94316D88F54000B3EF7 /* RedBlock.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +361,29 @@
 				06E8C70816D883FB00997A94 /* main.m in Sources */,
 				06E8C70C16D883FB00997A94 /* AppDelegate.m in Sources */,
 				06E8C71516D883FB00997A94 /* FallingBlocks.xcdatamodeld in Sources */,
+				0666C93A16D88EAE000B3EF7 /* MainScreenViewController.m in Sources */,
+				0666C93D16D88F1A000B3EF7 /* ScoreTracker.m in Sources */,
+				0666C93E16D88F25000B3EF7 /* FallingBlocks.m in Sources */,
+				0666C94416D88F5E000B3EF7 /* PauseView.m in Sources */,
+				0666C94516D88F61000B3EF7 /* GameViewController.m in Sources */,
+				0666C94616D88F66000B3EF7 /* RenderView.m in Sources */,
+				0666C94716D88FA3000B3EF7 /* Block.m in Sources */,
+				0666C94816D88FA3000B3EF7 /* BlockFactory.m in Sources */,
+				0666C94916D88FA3000B3EF7 /* BlueBlock.m in Sources */,
+				0666C94A16D88FA3000B3EF7 /* GreenBlock.m in Sources */,
+				0666C94B16D88FA3000B3EF7 /* OrangeBlock.m in Sources */,
+				0666C94C16D88FA3000B3EF7 /* PinkBlock.m in Sources */,
+				0666C94D16D88FA3000B3EF7 /* RedBlock.m in Sources */,
+				0666C94E16D88FA3000B3EF7 /* TealBlock.m in Sources */,
+				0666C94F16D88FA3000B3EF7 /* YellowBlock.m in Sources */,
+				0666C95016D88FBE000B3EF7 /* Piece.m in Sources */,
+				0666C95116D88FBE000B3EF7 /* Cross.m in Sources */,
+				0666C95216D88FBE000B3EF7 /* Jagged.m in Sources */,
+				0666C95316D88FBE000B3EF7 /* JaggedBackwards.m in Sources */,
+				0666C95416D88FBE000B3EF7 /* L.m in Sources */,
+				0666C95516D88FBE000B3EF7 /* LBackwards.m in Sources */,
+				0666C95616D88FBE000B3EF7 /* Line.m in Sources */,
+				0666C95716D88FBE000B3EF7 /* Square.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +498,7 @@
 				06E8C71A16D883FB00997A94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

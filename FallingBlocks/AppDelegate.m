@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  FallingBlocks
 //
-//  Created by Nate Rowan on 2/22/13.
+//  Created by Nate Rowan on 2/7/13.
 //  Copyright (c) 2013 Nate Rowan. All rights reserved.
 //
 
@@ -16,10 +16,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    //self.window.backgroundColor = [UIColor whiteColor];
+    //[self.window makeKeyAndVisible];
     return YES;
 }
 
