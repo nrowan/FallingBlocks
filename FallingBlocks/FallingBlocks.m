@@ -17,15 +17,16 @@
 #import "LBackwards.h"
 #import "Block.h"
 #import "BlockFactory.h"
+#import "ScoreTracker.h"
 
 @implementation FallingBlocks
 
-@synthesize score = _score;
 @synthesize level = _level;
 @synthesize gameArray = _gameArray;
 @synthesize fallingPiece = _fallingPiece;
 @synthesize levelDetails = _levelDetails;
 @synthesize blockFactory = _blockFactory;
+@synthesize scoreTracker = _scoreTracker;
 
 const double TOTAL_LEVELS = 50;
 const NSInteger SCORE_MULTIPLIER = 1;
@@ -38,11 +39,11 @@ const NSInteger BOARD_COLS = 10;
 const NSInteger START_PIECE_ROW = 4;
 const NSInteger START_PIECE_COLUMN = 4;
 
--(id) init: (BlockFactory *) blockFactory
+-(id) init: (BlockFactory *) blockFactory scoreTracker: (ScoreTracker *) scoreTracker
 {
     self.level = 1;
-    self.score = 0;
     self.blockFactory = blockFactory;
+    self.scoreTracker = scoreTracker;
     
     // Speed decrease for each level averaged over total levels
     double levelSpeedDecrease = 60.0 / (TOTAL_LEVELS-1.0);
@@ -98,7 +99,8 @@ const NSInteger START_PIECE_COLUMN = 4;
     double pieceSpeed = [[[self.levelDetails objectAtIndex:self.level-1] objectAtIndex:0 ] doubleValue];
     
     // Randomize the new piece that is created
-    int r = arc4random_uniform(7);
+    //int r = arc4random_uniform(7);
+    int r = 1;
     if(r == 0)
         self.fallingPiece = [[Square alloc] init:pieceSpeed blockFactory:self.blockFactory];
     else if(r == 1)
@@ -137,6 +139,8 @@ const NSInteger START_PIECE_COLUMN = 4;
                 self.fallingPiece.row = oldRowLocation;
                 [self savePieceToArray:self.fallingPiece arrayToSavePiece:self.gameArray arrayRow:self.fallingPiece.row arrayColumn:self.fallingPiece.column];
                 [self rowFilled];
+                [self.scoreTracker addAllBonuses];
+                
                 [self newLevel];
                 
                 // Create new piece, if new piece is immediately in a space it's not supposed to be, then game is over
@@ -171,7 +175,7 @@ const NSInteger START_PIECE_COLUMN = 4;
 - (void) newLevel
 {
     // Increase level if score is greater than current level's max points required
-    if(self.score >= [[[self.levelDetails objectAtIndex:self.level-1] objectAtIndex:1] integerValue] && self.level <= TOTAL_LEVELS)
+    if(self.scoreTracker.score >= [[[self.levelDetails objectAtIndex:self.level-1] objectAtIndex:1] integerValue] && self.level <= TOTAL_LEVELS)
         self.level++;
 }
 
@@ -305,8 +309,8 @@ const NSInteger START_PIECE_COLUMN = 4;
 // Check if any rows got completed, if so remove them and add up the score
 - (void) rowFilled
 {
-    NSInteger completedRows = 0;
     NSInteger tempValue = 0;
+    NSMutableArray *rowNumbers = [[NSMutableArray alloc] init];
     Block *tempBlock;
     for (int i = 0; i < BOARD_ROWS; i++) {
         for (int j=0; j < BOARD_COLS; j++) {
@@ -318,19 +322,23 @@ const NSInteger START_PIECE_COLUMN = 4;
         if(tempValue == BOARD_COLS)
         {
             self.gameArray = [self replaceCompletedRow:self.gameArray row:i];
-            completedRows++;
+            // Save teh row number to the array
+            [rowNumbers addObject:[NSNumber numberWithInt:i]];
         }
         tempValue = 0;
     }
-    [self addScore:completedRows];
+    if([rowNumbers count] > 0)
+        [self addScore:rowNumbers];
 }
 
 // Function to handle scoring
-- (void) addScore:(NSInteger) numberOfLines;
+- (void) addScore:(NSMutableArray *) rowsCleared;
 {
-    for (int i = 1; i < numberOfLines+1; i++) {
+    
+    [self.scoreTracker rowsCleared:rowsCleared level:self.level];
+    /*for (int i = 1; i < numberOfLines+1; i++) {
         self.score += (i*i)*SCORE_MULTIPLIER;
-    }
+    }*/
 }
 
 // Remove the row from array and insert new empty row at beginning

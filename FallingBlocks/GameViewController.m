@@ -20,6 +20,7 @@
 @synthesize screenSize = _screenSize;
 @synthesize pause = _pause;
 @synthesize myPreviousTick = _myPreviousTick;
+@synthesize scoreTracker = _scoreTracker;
 
 const int SCREEN_HEIGHT_POINTS = 400;
 const int SCREEN_WIDTH_POINTS = 200;
@@ -51,7 +52,7 @@ const int SCREEN_WIDTH_POINTS = 200;
         }
         else
         {
-            self.score.text = [NSString stringWithFormat:@"%d", [self.myFallingBlocks score]];
+            self.score.text = [NSString stringWithFormat:@"%d", [self.scoreTracker score]];
             self.level.text = [NSString stringWithFormat:@"%d", [self.myFallingBlocks level]];
             [self.gameView renderGame:[self.myFallingBlocks gameDisplayArray]];
         }
@@ -68,7 +69,8 @@ const int SCREEN_WIDTH_POINTS = 200;
     self.blockFactory = NULL;
 
     self.blockFactory = [BlockFactory factory];
-    self.myFallingBlocks = [[FallingBlocks alloc] init: self.blockFactory];
+    self.scoreTracker = [[ScoreTracker alloc] init];
+    self.myFallingBlocks = [[FallingBlocks alloc] init: self.blockFactory scoreTracker:self.scoreTracker];
     CGRect screen = [[UIScreen mainScreen] bounds];
     
     if(!self.gameView)

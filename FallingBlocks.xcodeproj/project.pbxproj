@@ -51,6 +51,8 @@
 		06E8C73216D885E900997A94 /* GreenBlock.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E8C73116D885E900997A94 /* GreenBlock.png */; };
 		06E8C73B16D8864000997A94 /* TealBlock.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E8C73916D8864000997A94 /* TealBlock.png */; };
 		06E8C73C16D8864000997A94 /* YellowBlock.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E8C73A16D8864000997A94 /* YellowBlock.png */; };
+		06F8DDAA16DAB898003568A2 /* LineBonus.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F8DDA916DAB898003568A2 /* LineBonus.m */; };
+		06F8DDAD16DABF2B003568A2 /* ConsecutiveBonus.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F8DDAC16DABF2B003568A2 /* ConsecutiveBonus.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,6 +127,11 @@
 		06E8C75A16D8879200997A94 /* TealBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TealBlock.m; sourceTree = "<group>"; };
 		06E8C75B16D8879200997A94 /* YellowBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YellowBlock.h; sourceTree = "<group>"; };
 		06E8C75C16D8879200997A94 /* YellowBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YellowBlock.m; sourceTree = "<group>"; };
+		06F8DDA716DAA78A003568A2 /* ScoreBonus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScoreBonus.h; sourceTree = "<group>"; };
+		06F8DDA816DAB898003568A2 /* LineBonus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineBonus.h; sourceTree = "<group>"; };
+		06F8DDA916DAB898003568A2 /* LineBonus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineBonus.m; sourceTree = "<group>"; };
+		06F8DDAB16DABF2B003568A2 /* ConsecutiveBonus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsecutiveBonus.h; sourceTree = "<group>"; };
+		06F8DDAC16DABF2B003568A2 /* ConsecutiveBonus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsecutiveBonus.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +182,7 @@
 		06E8C70116D883FB00997A94 /* FallingBlocks */ = {
 			isa = PBXGroup;
 			children = (
+				06F8DDA616DA94C8003568A2 /* Scoring */,
 				0666C93B16D88EF7000B3EF7 /* Storyboard.storyboard */,
 				06E8C70A16D883FB00997A94 /* AppDelegate.h */,
 				06E8C70B16D883FB00997A94 /* AppDelegate.m */,
@@ -184,8 +192,6 @@
 				06E8C73016D885C300997A94 /* Pieces */,
 				06E8C72216D884DE00997A94 /* FallingBlocks.h */,
 				06E8C72316D884DE00997A94 /* FallingBlocks.m */,
-				06E8C75516D8878100997A94 /* ScoreTracker.h */,
-				06E8C75616D8878100997A94 /* ScoreTracker.m */,
 				06E8C71316D883FB00997A94 /* FallingBlocks.xcdatamodeld */,
 				06E8C70216D883FB00997A94 /* Supporting Files */,
 			);
@@ -282,6 +288,20 @@
 				06E8C75816D8879200997A94 /* Square.m */,
 			);
 			name = Pieces;
+			sourceTree = "<group>";
+		};
+		06F8DDA616DA94C8003568A2 /* Scoring */ = {
+			isa = PBXGroup;
+			children = (
+				06E8C75516D8878100997A94 /* ScoreTracker.h */,
+				06E8C75616D8878100997A94 /* ScoreTracker.m */,
+				06F8DDA716DAA78A003568A2 /* ScoreBonus.h */,
+				06F8DDA816DAB898003568A2 /* LineBonus.h */,
+				06F8DDA916DAB898003568A2 /* LineBonus.m */,
+				06F8DDAB16DABF2B003568A2 /* ConsecutiveBonus.h */,
+				06F8DDAC16DABF2B003568A2 /* ConsecutiveBonus.m */,
+			);
+			name = Scoring;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,6 +404,8 @@
 				0666C95516D88FBE000B3EF7 /* LBackwards.m in Sources */,
 				0666C95616D88FBE000B3EF7 /* Line.m in Sources */,
 				0666C95716D88FBE000B3EF7 /* Square.m in Sources */,
+				06F8DDAA16DAB898003568A2 /* LineBonus.m in Sources */,
+				06F8DDAD16DABF2B003568A2 /* ConsecutiveBonus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

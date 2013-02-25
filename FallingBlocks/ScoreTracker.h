@@ -10,4 +10,10 @@
 
 @interface ScoreTracker : NSObject
 
+@property NSInteger score;
+@property (strong) NSMutableArray *bonuses;
+
+- (id) init;
+- (void) addAllBonuses;
+- (void) rowsCleared: (NSMutableArray *) rowsCleared level:(NSInteger) level;
 @end

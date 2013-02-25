@@ -10,6 +10,7 @@
 #import  "FallingBlocks.h"
 #import "RenderView.h"
 #import "PauseView.h"
+#import "ScoreTracker.h"
 
 @interface GameViewController : UIViewController
 extern const int SCREEN_HEIGHT_POINTS;
@@ -23,6 +24,7 @@ extern const int SCREEN_WIDTH_POINTS;
 @property (nonatomic) BOOL pause;
 @property (strong) PauseView *pauseView;
 @property (strong) BlockFactory *blockFactory;
+@property (strong) ScoreTracker *scoreTracker;
 @property (weak, nonatomic) IBOutlet UIButton *leftButton;
 @property (weak, nonatomic) IBOutlet UIButton *rightButton;
 @property (weak, nonatomic) IBOutlet UILabel *score;
