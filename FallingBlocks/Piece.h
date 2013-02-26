@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BlockFactory.h"
+@class BlockFactory;
 
 @interface Piece : NSObject
 @property (nonatomic) NSInteger row;

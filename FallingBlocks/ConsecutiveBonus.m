@@ -28,9 +28,10 @@
     {
         self.consecutiveMaxLines++;
     }
-    else
+    else if(lines == 1 || lines == 2 || lines == 3)
     {
         if (self.consecutiveMaxLines != 0) {
+            self.bonusTotal = self.consecutiveMaxLines * 10;
             self.consecutiveMaxLines = 0;
             self.bonusReady = TRUE;
         }

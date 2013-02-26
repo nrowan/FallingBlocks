@@ -7,11 +7,13 @@
 //
 
 #import "GameViewController.h"
+#import <QuartzCore/QuartzCore.h>
 #import "FallingBlocks.h"
 #import "RenderView.h"
 #import "PauseView.h"
 #import "BlockFactory.h"
-#import <QuartzCore/QuartzCore.h>
+#import "ScoreTracker.h"
+#import "LevelTracker.h"
 
 @implementation GameViewController
 
@@ -21,6 +23,7 @@
 @synthesize pause = _pause;
 @synthesize myPreviousTick = _myPreviousTick;
 @synthesize scoreTracker = _scoreTracker;
+@synthesize levelTracker = _levelTracker;
 
 const int SCREEN_HEIGHT_POINTS = 400;
 const int SCREEN_WIDTH_POINTS = 200;
@@ -52,8 +55,15 @@ const int SCREEN_WIDTH_POINTS = 200;
         }
         else
         {
+            // Add up all the bonuses from the turn
+            [self.scoreTracker addAllBonuses];
+            
+            // Check if new score should increase the level
+            [self.levelTracker newLevel: self.scoreTracker.score];
+            
+            // Set the new status of the game on the screen
             self.score.text = [NSString stringWithFormat:@"%d", [self.scoreTracker score]];
-            self.level.text = [NSString stringWithFormat:@"%d", [self.myFallingBlocks level]];
+            self.levelLabel.text = [NSString stringWithFormat:@"%d", [self.levelTracker level]];
             [self.gameView renderGame:[self.myFallingBlocks gameDisplayArray]];
         }
     }
@@ -70,7 +80,8 @@ const int SCREEN_WIDTH_POINTS = 200;
 
     self.blockFactory = [BlockFactory factory];
     self.scoreTracker = [[ScoreTracker alloc] init];
-    self.myFallingBlocks = [[FallingBlocks alloc] init: self.blockFactory scoreTracker:self.scoreTracker];
+    self.levelTracker = [[LevelTracker alloc] init];
+    self.myFallingBlocks = [[FallingBlocks alloc] init: self.blockFactory scoreTracker:self.scoreTracker levelTracker:self.levelTracker];
     CGRect screen = [[UIScreen mainScreen] bounds];
     
     if(!self.gameView)

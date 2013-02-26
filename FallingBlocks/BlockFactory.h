@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Block.h"
+@class Block;
 
 @interface BlockFactory : NSObject
 + (BlockFactory *)factory;

@@ -216,7 +216,7 @@
                     <connections>
                         <outlet property="gameScreenView" destination="zqU-pT-nkx" id="oVC-NJ-KSJ"/>
                         <outlet property="leftButton" destination="WxH-b4-jT9" id="he8-Sn-00x"/>
-                        <outlet property="level" destination="8gH-Mv-1Mt" id="oEc-eM-dYw"/>
+                        <outlet property="levelLabel" destination="8gH-Mv-1Mt" id="AnI-go-pgt"/>
                         <outlet property="rightButton" destination="buI-Rf-7qk" id="0Yf-Ep-UHY"/>
                         <outlet property="score" destination="HLL-XV-4XE" id="Rb4-ee-UfB"/>
                         <segue destination="ORn-bt-NTN" kind="unwind" identifier="returnMainMenuSegue" unwindAction="returned:" id="tOf-5I-peo"/>
@@ -231,6 +231,36 @@
     <resources>
         <image name="MainMenuButton.png" width="150" height="50"/>
     </resources>
+    <classes>
+        <class className="GameViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="dropButtonPressed:"/>
+                <relationship kind="action" name="moveButtonPressed:"/>
+                <relationship kind="action" name="pauseButtonPressed:"/>
+                <relationship kind="action" name="rotateButtonPressed:"/>
+                <relationship kind="outlet" name="PauseMenuView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="gameScreenView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="leftButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="levelLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="rightButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="score" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="MainScreenViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainScreenViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="returned:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="outlet" name="gameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="UIStoryboardSegue" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

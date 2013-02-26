@@ -20,7 +20,7 @@
 
 - (void) rowsCleared:(NSInteger)lines
 {
-    self.bonusTotal = lines*lines;
+    self.bonusTotal = (lines-1)*(lines-1);
     self.bonusReady = TRUE;
 }
 

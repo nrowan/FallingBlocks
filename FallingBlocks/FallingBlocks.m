@@ -18,18 +18,14 @@
 #import "Block.h"
 #import "BlockFactory.h"
 #import "ScoreTracker.h"
+#import "LevelTracker.h"
 
 @implementation FallingBlocks
 
-@synthesize level = _level;
 @synthesize gameArray = _gameArray;
 @synthesize fallingPiece = _fallingPiece;
-@synthesize levelDetails = _levelDetails;
 @synthesize blockFactory = _blockFactory;
 @synthesize scoreTracker = _scoreTracker;
-
-const double TOTAL_LEVELS = 50;
-const NSInteger SCORE_MULTIPLIER = 1;
 
 // The board is 4 rows bigger to account for the block starting off screen
 const NSInteger BOARD_ROWS = 24;
@@ -39,34 +35,11 @@ const NSInteger BOARD_COLS = 10;
 const NSInteger START_PIECE_ROW = 4;
 const NSInteger START_PIECE_COLUMN = 4;
 
--(id) init: (BlockFactory *) blockFactory scoreTracker: (ScoreTracker *) scoreTracker
+-(id) init: (BlockFactory *) blockFactory scoreTracker: (ScoreTracker *) scoreTracker levelTracker: (LevelTracker *) levelTracker
 {
-    self.level = 1;
     self.blockFactory = blockFactory;
     self.scoreTracker = scoreTracker;
-    
-    // Speed decrease for each level averaged over total levels
-    double levelSpeedDecrease = 60.0 / (TOTAL_LEVELS-1.0);
-    NSMutableArray *levelColumn;
-    self.levelDetails = [[NSMutableArray alloc] init];
-    double tempSpeed;
-    
-    // Set how many 4 row combos it would take to move to next level
-    NSInteger numberOfMaxRowsToCompleteLevel = 10;
-    
-    // Set the array for the different level settings
-    for (int i = 0; i < TOTAL_LEVELS; i++) {
-        levelColumn = [[NSMutableArray alloc] init];
-        // Add speed based on the level
-        tempSpeed = (60.0 - (levelSpeedDecrease * i)) / 60.0;
-        [levelColumn addObject:[NSNumber numberWithDouble:tempSpeed]];
-        
-        // Non complete equation for the score required to reach the next level. Current max rows is equal to 16.
-        // This is terrible but I'm tired
-        [levelColumn addObject:[NSNumber numberWithInt:((i+1)*16*numberOfMaxRowsToCompleteLevel)*SCORE_MULTIPLIER]];
-
-        [self.levelDetails addObject:levelColumn];
-    }
+    self.levelTracker = levelTracker;
     
     // Create the game board with all cells filled with nothing in them
     self.gameArray = [[NSMutableArray alloc] init];
@@ -96,11 +69,11 @@ const NSInteger START_PIECE_COLUMN = 4;
 // Create new falling piece
 - (void) newPiece
 {
-    double pieceSpeed = [[[self.levelDetails objectAtIndex:self.level-1] objectAtIndex:0 ] doubleValue];
+    double pieceSpeed = self.levelTracker.getLevelSpeed;
     
     // Randomize the new piece that is created
-    //int r = arc4random_uniform(7);
-    int r = 1;
+    int r = arc4random_uniform(7);
+
     if(r == 0)
         self.fallingPiece = [[Square alloc] init:pieceSpeed blockFactory:self.blockFactory];
     else if(r == 1)
@@ -139,20 +112,20 @@ const NSInteger START_PIECE_COLUMN = 4;
                 self.fallingPiece.row = oldRowLocation;
                 [self savePieceToArray:self.fallingPiece arrayToSavePiece:self.gameArray arrayRow:self.fallingPiece.row arrayColumn:self.fallingPiece.column];
                 [self rowFilled];
-                [self.scoreTracker addAllBonuses];
                 
-                [self newLevel];
-                
-                // Create new piece, if new piece is immediately in a space it's not supposed to be, then game is over
-                [self newPiece];
-                if (![self canPieceMove:self.fallingPiece]) {
-                    return FALSE;
-                }
+                self.fallingPiece = nil;
             }
         }
     }
     else
+    {
+        // Create new piece, if new piece is immediately in a space it's not supposed to be, then game is over
         [self newPiece];
+        
+        if (![self canPieceMove:self.fallingPiece]) {
+            return FALSE;
+        }
+    }
     
     return TRUE;
 }
@@ -170,13 +143,6 @@ const NSInteger START_PIECE_COLUMN = 4;
         piece.pieceTimeSinceLastMoved += deltaTime;
         return FALSE;
     }
-}
-
-- (void) newLevel
-{
-    // Increase level if score is greater than current level's max points required
-    if(self.scoreTracker.score >= [[[self.levelDetails objectAtIndex:self.level-1] objectAtIndex:1] integerValue] && self.level <= TOTAL_LEVELS)
-        self.level++;
 }
 
 // Move the falling piece left or right one column
@@ -322,23 +288,19 @@ const NSInteger START_PIECE_COLUMN = 4;
         if(tempValue == BOARD_COLS)
         {
             self.gameArray = [self replaceCompletedRow:self.gameArray row:i];
-            // Save teh row number to the array
+            // Save the row number to the array
             [rowNumbers addObject:[NSNumber numberWithInt:i]];
         }
         tempValue = 0;
     }
     if([rowNumbers count] > 0)
-        [self addScore:rowNumbers];
+        [self addScoreLinesCleared:rowNumbers];
 }
 
-// Function to handle scoring
-- (void) addScore:(NSMutableArray *) rowsCleared;
+// Function to handle scoring for lines cleared
+- (void) addScoreLinesCleared:(NSMutableArray *) rowsCleared;
 {
-    
-    [self.scoreTracker rowsCleared:rowsCleared level:self.level];
-    /*for (int i = 1; i < numberOfLines+1; i++) {
-        self.score += (i*i)*SCORE_MULTIPLIER;
-    }*/
+    [self.scoreTracker rowsCleared:rowsCleared level:self.levelTracker.level];
 }
 
 // Remove the row from array and insert new empty row at beginning
