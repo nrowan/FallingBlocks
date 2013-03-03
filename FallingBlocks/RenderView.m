@@ -35,8 +35,8 @@
 // Create the area in points for the game view
 - (void) setGameDimensions
 {
-    self.gameHeightPoints = 400;
-    self.gameWidthPoints = 200;
+    self.gameHeightPoints = self.frame.size.height;
+    self.gameWidthPoints = self.frame.size.width;
 }
 
 // Render the game according to the passed game array

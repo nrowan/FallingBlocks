@@ -12,17 +12,22 @@
 #import "ScoreBonus.h"
 
 @implementation ScoreTracker
+@synthesize score = _score;
+@synthesize bonuses = _bonuses;
 
 - (id) init
 {
-    self.score = 0;
-    self.bonuses = [[NSMutableArray alloc] init];
-    
-    id<ScoreBonus> tempLineBonus = [[LineBonus alloc] init];
-    id<ScoreBonus> tempConsecBonus = [[ConsecutiveBonus alloc] init];
-    
-    [self.bonuses addObject:tempLineBonus];
-    [self.bonuses addObject:tempConsecBonus];
+    if (self = [super init])
+    {
+        self.score = 0;
+        self.bonuses = [[NSMutableArray alloc] init];
+        
+        id<ScoreBonus> tempLineBonus = [[LineBonus alloc] init];
+        id<ScoreBonus> tempConsecBonus = [[ConsecutiveBonus alloc] init];
+        
+        [self.bonuses addObject:tempLineBonus];
+        [self.bonuses addObject:tempConsecBonus];
+    }
     
     return self;
 }
@@ -43,5 +48,4 @@
         [bonus rowsCleared:[rowsCleared count]];
     }
 }
-
 @end

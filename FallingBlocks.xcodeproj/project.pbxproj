@@ -38,6 +38,7 @@
 		0666C95716D88FBE000B3EF7 /* Square.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E8C75816D8879200997A94 /* Square.m */; };
 		0666C95916D89002000B3EF7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0666C95816D89002000B3EF7 /* QuartzCore.framework */; };
 		06773D4F16DC7235007B56C3 /* LevelTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 06773D4E16DC7235007B56C3 /* LevelTracker.m */; };
+		06D4C77A16E07A0F002BC592 /* HighScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D4C77916E07A0F002BC592 /* HighScore.m */; };
 		06E8C6FA16D883FB00997A94 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E8C6F916D883FB00997A94 /* UIKit.framework */; };
 		06E8C6FC16D883FB00997A94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E8C6FB16D883FB00997A94 /* Foundation.framework */; };
 		06E8C6FE16D883FB00997A94 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E8C6FD16D883FB00997A94 /* CoreGraphics.framework */; };
@@ -61,6 +62,8 @@
 		0666C95816D89002000B3EF7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		06773D4D16DC7235007B56C3 /* LevelTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelTracker.h; sourceTree = "<group>"; };
 		06773D4E16DC7235007B56C3 /* LevelTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelTracker.m; sourceTree = "<group>"; };
+		06D4C77816E07A0F002BC592 /* HighScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighScore.h; sourceTree = "<group>"; };
+		06D4C77916E07A0F002BC592 /* HighScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighScore.m; sourceTree = "<group>"; };
 		06E8C6F616D883FB00997A94 /* FallingBlocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FallingBlocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06E8C6F916D883FB00997A94 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		06E8C6FB16D883FB00997A94 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -305,6 +308,8 @@
 				06F8DDA916DAB898003568A2 /* LineBonus.m */,
 				06F8DDAB16DABF2B003568A2 /* ConsecutiveBonus.h */,
 				06F8DDAC16DABF2B003568A2 /* ConsecutiveBonus.m */,
+				06D4C77816E07A0F002BC592 /* HighScore.h */,
+				06D4C77916E07A0F002BC592 /* HighScore.m */,
 			);
 			name = Scoring;
 			sourceTree = "<group>";
@@ -412,6 +417,7 @@
 				06F8DDAA16DAB898003568A2 /* LineBonus.m in Sources */,
 				06F8DDAD16DABF2B003568A2 /* ConsecutiveBonus.m in Sources */,
 				06773D4F16DC7235007B56C3 /* LevelTracker.m in Sources */,
+				06D4C77A16E07A0F002BC592 /* HighScore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

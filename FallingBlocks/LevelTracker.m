@@ -17,28 +17,31 @@ const NSInteger SCORE_MULTIPLIER = 1;
 
 - (id) init
 {
-    self.level = 1;
-    
-    // Speed decrease for each level averaged over total levels
-    double levelSpeedDecrease = 60.0 / (TOTAL_LEVELS-1.0);
-    NSMutableArray *levelColumn;
-    self.levelDetails = [[NSMutableArray alloc] init];
-    double tempSpeed;
-    
-    // Set how many 4 row combos it would take to move to next level
-    NSInteger numberOfMaxRowsToCompleteLevel = 10;
-    
-    // Set the array for the different level settings
-    for (int i = 0; i < TOTAL_LEVELS; i++) {
-        levelColumn = [[NSMutableArray alloc] init];
-        // Add speed based on the level
-        tempSpeed = (60.0 - (levelSpeedDecrease * i)) / 60.0;
-        [levelColumn addObject:[NSNumber numberWithDouble:tempSpeed]];
+    if (self = [super init])
+    {
+        self.level = 1;
         
-        // Non complete equation for the score required to reach the next level. Current max rows is equal to 16.
-        // This is terrible but I'm tired
-        [levelColumn addObject:[NSNumber numberWithInt:((i+1)*16*numberOfMaxRowsToCompleteLevel)*SCORE_MULTIPLIER]];
-        [self.levelDetails addObject:levelColumn];
+        // Speed decrease for each level averaged over total levels
+        double levelSpeedDecrease = 60.0 / (TOTAL_LEVELS-1.0);
+        NSMutableArray *levelColumn;
+        self.levelDetails = [[NSMutableArray alloc] init];
+        double tempSpeed;
+        
+        // Set how many 4 row combos it would take to move to next level
+        NSInteger numberOfMaxRowsToCompleteLevel = 10;
+        
+        // Set the array for the different level settings
+        for (int i = 0; i < TOTAL_LEVELS; i++) {
+            levelColumn = [[NSMutableArray alloc] init];
+            // Add speed based on the level
+            tempSpeed = (60.0 - (levelSpeedDecrease * i)) / 60.0;
+            [levelColumn addObject:[NSNumber numberWithDouble:tempSpeed]];
+            
+            // Non complete equation for the score required to reach the next level. Current max rows is equal to 16.
+            // This is terrible but I'm tired
+            [levelColumn addObject:[NSNumber numberWithInt:((i+1)*16*numberOfMaxRowsToCompleteLevel)*SCORE_MULTIPLIER]];
+            [self.levelDetails addObject:levelColumn];
+        }
     }
     
     return self;

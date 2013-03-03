@@ -16,4 +16,5 @@
 - (id) init;
 - (void) addAllBonuses;
 - (void) rowsCleared: (NSMutableArray *) rowsCleared level:(NSInteger) level;
+
 @end
